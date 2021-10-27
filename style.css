@@ -147,3 +147,10 @@ body{
     margin: 1.2em 0;
     font-size: 1rem;
 }
+
+
+@media  screen and (min-width:700px) {
+    body{
+        background-image: url("/images/pattern-background-desktop.svg");
+    }
+}
