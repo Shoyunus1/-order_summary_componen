@@ -2,16 +2,26 @@
 
     /*Color*/
         --place_blue:hsl(225, 100%, 94%);
+        --place_blue-opaco:hsl(225 100% 94% / .2);
         --Bright_blue: hsl(245, 75%, 52%);
         --Very_pale_blue:hsl(225, 100%, 98%);
         --Desaturated_blue:hsl(224, 23%, 55%);
         --Dark_blue: hsl(223, 47%, 23%);
+        --white:white;
 
     /*Font*/
         /*Weights*/
             --fw-normal:500;
             --fw-medium:700;
             --fw-blod:900;
+
+    /*Border*/
+        /*Radius*/
+            --br-zise:10px;
+
+    /*box*/
+        /*shadow*/
+            --bs-shadow-style: 0px 5px 10px rgb(0 0 0 / .5);
 
 
 
@@ -20,14 +30,120 @@
 }
 
 
-html{
-    font-size: 16px;
-}
+
 body{
+    font-size: 16px;
     background-image: url("/images/pattern-background-mobile.svg");
     font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 *{
     box-sizing: border-box;
+} 
+
+.card{
+    background-color:var(--white);
+    border-radius: var(--br-zise);
+    width: 320px;
+    box-shadow: var(--bs-shadow-style);
+}
+
+.header img{
+    max-width: 100%;
+    border-top-left-radius: var(--br-zise);;
+    border-top-right-radius: var(--br-zise);;
+}
+
+.header ~ * {
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+.plan__title, .card__title{
+    color:var(--Dark_blue);
+    font-weight: var(--fw-blod);
+}
+.card__title{
+    font-size: 1.4rem;
+   
+
+}
+
+.card__text, .card__title{
+    text-align: center;
+}
+
+.card__text, .plan__price, .card__link{
+    font-weight: var(--fw-medium);
+    opacity: .5;
+    color: var(--Desaturated_blue);
+}
+.card__text{
+    font-size: .9rem;
+    line-height: 1.5;
+    padding-left: 3em;
+    padding-right: 3em;
+ 
+}
+
+.plan{
+    background-color: var(--place_blue-opaco);
+    width: 260px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: var(--br-zise);
+    display: flex;    
+    gap: 20px;
+}
+
+.plan__icon{
+    max-width: 40%;
+    height: 50px;
+    align-self: center;
+}
+
+
+.plan__title{
+    font-size: 1rem;
+    margin-bottom: 1px;
+   
+}
+
+.plan__link{
+    color: var(--Bright_blue);
+}
+.plan__price, .plan__link{
+  font-size: .8rem;
+}
+.plan__link{
+    color: var(--Bright_blue);
+    grid-column:  3 / 4;
+    grid-row: 1 / 4;
+    align-self: center;
+}
+
+.card__button{
+    appearance: none;
+    display: block;
+    width: 260px;
+    margin: 1em  auto;
+    background-color: var(--Bright_blue);
+    outline: none;
+    border-style: none;
+    color: var(--white);
+    font-size: 1rem;
+    padding: 1em;
+    border-radius: var(--br-zise);
+    box-shadow: var(--bs-shadow-style);
+}
+.card__link{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 1.2em 0;
+    font-size: 1rem;
 }
