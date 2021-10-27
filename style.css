@@ -1,0 +1,33 @@
+:root{
+
+    /*Color*/
+        --place_blue:hsl(225, 100%, 94%);
+        --Bright_blue: hsl(245, 75%, 52%);
+        --Very_pale_blue:hsl(225, 100%, 98%);
+        --Desaturated_blue:hsl(224, 23%, 55%);
+        --Dark_blue: hsl(223, 47%, 23%);
+
+    /*Font*/
+        /*Weights*/
+            --fw-normal:500;
+            --fw-medium:700;
+            --fw-blod:900;
+
+
+
+    /* - Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display) */
+/* - Weights: 500, 700, 900 */
+}
+
+
+html{
+    font-size: 16px;
+}
+body{
+    background-image: url("/images/pattern-background-mobile.svg");
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
